@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/text_value1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="413dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="144dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPartida">
+
+        <TextView
+            android:id="@+id/textViewData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_value2"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextTextData"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="398dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <Spinner
+            android:id="@+id/spinnerTimeA"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="4"
+            android:entries="@array/spinner_value"
+            android:gravity="right" />
+
+        <EditText
+            android:id="@+id/editTextTextPlacarA"
+            android:layout_width="37dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textViewX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_value3"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextTextPlacarB"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number" />
+
+        <Spinner
+            android:id="@+id/spinnerTimeB"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="4"
+            android:entries="@array/spinner_value"
+            android:gravity="right" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botaoMostrar"
+        android:layout_width="127dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="162dp"
+        android:background="@color/butao_cor"
+        android:gravity="center_horizontal|top|center_vertical"
+        android:onClick="onClick"
+        android:text="@string/btn_valor1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="257dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/botaoMostrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textViewPublico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_value4"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPublico"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMostrar"
+        android:layout_width="359dp"
+        android:layout_height="208dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="33dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoMostrar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="44dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewPartida"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_sports_soccer_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
